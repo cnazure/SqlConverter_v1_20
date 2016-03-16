@@ -1,0 +1,3 @@
+# SqlConverter_v1_20
+SqlConverter
+SQLite转换工具SqlConverter，支持从SQL Server转换为SQLite，能够附带结构和数据。
