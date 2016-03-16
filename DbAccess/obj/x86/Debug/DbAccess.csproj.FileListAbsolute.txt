@@ -1,0 +1,7 @@
+D:\temp2\SqlConverter_v1_20\DbAccess\bin\x86\Debug\DbAccess.dll
+D:\temp2\SqlConverter_v1_20\DbAccess\bin\x86\Debug\DbAccess.pdb
+D:\temp2\SqlConverter_v1_20\DbAccess\bin\x86\Debug\log4net.dll
+D:\temp2\SqlConverter_v1_20\DbAccess\bin\x86\Debug\System.Data.SQLite.dll
+D:\temp2\SqlConverter_v1_20\DbAccess\obj\x86\Debug\DbAccess.csprojResolveAssemblyReference.cache
+D:\temp2\SqlConverter_v1_20\DbAccess\obj\x86\Debug\DbAccess.dll
+D:\temp2\SqlConverter_v1_20\DbAccess\obj\x86\Debug\DbAccess.pdb

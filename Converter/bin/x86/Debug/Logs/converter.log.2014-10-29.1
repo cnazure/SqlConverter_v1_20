@@ -1,0 +1,301 @@
+DEBUG 2014-10-29 11:03:58,689 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:837) - parsed table schema for [T_PRODUCTSTYPE]
+DEBUG 2014-10-29 11:03:59,103 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:837) - parsed table schema for [T_PRODUCTATTRIBUTE]
+DEBUG 2014-10-29 11:03:59,117 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:837) - parsed table schema for [T_PRODUCTATTRRELATION]
+DEBUG 2014-10-29 11:03:59,127 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:837) - parsed table schema for [T_PRODUCTATTRVALUE]
+DEBUG 2014-10-29 11:03:59,138 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:837) - parsed table schema for [T_PRODUCTSTYPEASSORT]
+DEBUG 2014-10-29 11:03:59,148 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:837) - parsed table schema for [T_PRODUCTSTYPESERIES]
+DEBUG 2014-10-29 11:03:59,158 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:837) - parsed table schema for [T_PRODUCTSTYPEPOSITION]
+DEBUG 2014-10-29 11:03:59,169 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:837) - parsed table schema for [T_PRODUCTSTYPECLASS]
+DEBUG 2014-10-29 11:03:59,180 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:837) - parsed table schema for [T_Notice]
+DEBUG 2014-10-29 11:03:59,193 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:837) - parsed table schema for [T_PRODUCTDETAILS]
+DEBUG 2014-10-29 11:03:59,203 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:837) - parsed table schema for [T_USR]
+DEBUG 2014-10-29 11:03:59,204 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:841) - finished parsing all tables in SQL Server schema
+DEBUG 2014-10-29 11:04:00,345 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:461) - Creating SQLite database...
+DEBUG 2014-10-29 11:04:00,358 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:466) - SQLite file was created successfully at [C:\Users\Administrator\Desktop\MicroPortDB.db]
+DEBUG 2014-10-29 11:04:01,199 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,200 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,200 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [(getdate)] AFTER [getdate]
+DEBUG 2014-10-29 11:04:01,200 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:725) - converted SQL Server GETDATE() to CURRENT_TIMESTAMP for column [pdtCreateTime]
+DEBUG 2014-10-29 11:04:01,200 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,200 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [(0)] AFTER [0]
+DEBUG 2014-10-29 11:04:01,201 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [(0)] AFTER [0]
+ INFO 2014-10-29 11:04:01,202 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:574) - 
+
+CREATE TABLE [T_PRODUCTSTYPE] (
+	[pdtTypeId]	integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	[pdtTypeName]	nvarchar(50) NOT NULL COLLATE NOCASE,
+	[pdtCreateTime]	datetime NOT NULL DEFAULT (CURRENT_TIMESTAMP),
+	[pdtTypeImgUrl]	nvarchar(100) COLLATE NOCASE,
+	[isRecommend]	integer DEFAULT 0,
+	[sortId]	integer DEFAULT 0
+
+);
+
+
+
+DEBUG 2014-10-29 11:04:01,280 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:491) - added schema for SQLite table [T_PRODUCTSTYPE]
+DEBUG 2014-10-29 11:04:01,281 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,281 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,282 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [(getdate)] AFTER [getdate]
+DEBUG 2014-10-29 11:04:01,282 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:725) - converted SQL Server GETDATE() to CURRENT_TIMESTAMP for column [pdtAttributeCreateTime]
+ INFO 2014-10-29 11:04:01,283 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:574) - 
+
+CREATE TABLE [T_PRODUCTATTRIBUTE] (
+	[pdtAttributeID]	integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	[pdtAttributeName]	nvarchar(100) COLLATE NOCASE,
+	[pdtAttributeCreateTime]	datetime DEFAULT (CURRENT_TIMESTAMP)
+
+);
+
+
+
+DEBUG 2014-10-29 11:04:01,398 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:491) - added schema for SQLite table [T_PRODUCTATTRIBUTE]
+DEBUG 2014-10-29 11:04:01,398 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,398 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,398 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,399 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,399 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,399 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,400 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [(0)] AFTER [0]
+DEBUG 2014-10-29 11:04:01,400 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [(0)] AFTER [0]
+DEBUG 2014-10-29 11:04:01,400 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [(getdate)] AFTER [getdate]
+DEBUG 2014-10-29 11:04:01,400 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:725) - converted SQL Server GETDATE() to CURRENT_TIMESTAMP for column [RelationCreateTime]
+ INFO 2014-10-29 11:04:01,401 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:574) - 
+
+CREATE TABLE [T_PRODUCTATTRRELATION] (
+	[pdtAttrRelationID]	integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	[productID]	integer,
+	[pdtAttributeID]	integer,
+	[pdtAttributeName]	nvarchar(50) COLLATE NOCASE,
+	[PdtValueID]	integer,
+	[PdtValueName]	nvarchar(50) COLLATE NOCASE,
+	[ValueState]	integer DEFAULT 0,
+	[SortId]	integer DEFAULT 0,
+	[RelationCreateTime]	datetime DEFAULT (CURRENT_TIMESTAMP)
+
+);
+
+
+
+DEBUG 2014-10-29 11:04:01,502 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:491) - added schema for SQLite table [T_PRODUCTATTRRELATION]
+DEBUG 2014-10-29 11:04:01,503 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,503 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,503 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,503 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [(getdate)] AFTER [getdate]
+DEBUG 2014-10-29 11:04:01,504 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:725) - converted SQL Server GETDATE() to CURRENT_TIMESTAMP for column [pdtValueCreateTime]
+ INFO 2014-10-29 11:04:01,504 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:574) - 
+
+CREATE TABLE [T_PRODUCTATTRVALUE] (
+	[pdtValueID]	integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	[pdtAttributeID]	integer,
+	[pdtValueName]	nvarchar(50) COLLATE NOCASE,
+	[pdtValueCreateTime]	datetime DEFAULT (CURRENT_TIMESTAMP)
+
+);
+
+
+
+DEBUG 2014-10-29 11:04:01,693 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:491) - added schema for SQLite table [T_PRODUCTATTRVALUE]
+DEBUG 2014-10-29 11:04:01,693 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,693 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,693 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,694 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [(getdate)] AFTER [getdate]
+DEBUG 2014-10-29 11:04:01,694 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:725) - converted SQL Server GETDATE() to CURRENT_TIMESTAMP for column [pdtAssortCreateTime]
+DEBUG 2014-10-29 11:04:01,694 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,694 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [(0)] AFTER [0]
+ INFO 2014-10-29 11:04:01,695 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:574) - 
+
+CREATE TABLE [T_PRODUCTSTYPEASSORT] (
+	[pdtAssortId]	integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	[pdtSeriesId]	integer,
+	[pdtAssortName]	nvarchar(50) NOT NULL COLLATE NOCASE,
+	[pdtAssortCreateTime]	datetime NOT NULL DEFAULT (CURRENT_TIMESTAMP),
+	[pdtImgUrl]	nvarchar(100) COLLATE NOCASE,
+	[sortID]	integer DEFAULT 0
+
+);
+
+
+
+DEBUG 2014-10-29 11:04:01,826 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:491) - added schema for SQLite table [T_PRODUCTSTYPEASSORT]
+DEBUG 2014-10-29 11:04:01,827 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,827 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,827 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,828 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [(getdate)] AFTER [getdate]
+DEBUG 2014-10-29 11:04:01,828 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:725) - converted SQL Server GETDATE() to CURRENT_TIMESTAMP for column [pdtSeriesCreateTime]
+DEBUG 2014-10-29 11:04:01,828 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,828 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [(0)] AFTER [0]
+ INFO 2014-10-29 11:04:01,828 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:574) - 
+
+CREATE TABLE [T_PRODUCTSTYPESERIES] (
+	[pdtSeriesId]	integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	[pdtPositionId]	integer,
+	[pdtSeriesName]	nvarchar(50) NOT NULL COLLATE NOCASE,
+	[pdtSeriesCreateTime]	datetime NOT NULL DEFAULT (CURRENT_TIMESTAMP),
+	[pdtImgUrl]	nvarchar(100) COLLATE NOCASE,
+	[sortID]	integer DEFAULT 0
+
+);
+
+
+
+DEBUG 2014-10-29 11:04:01,901 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:491) - added schema for SQLite table [T_PRODUCTSTYPESERIES]
+DEBUG 2014-10-29 11:04:01,901 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,901 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,902 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,902 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [(getdate)] AFTER [getdate]
+DEBUG 2014-10-29 11:04:01,902 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:725) - converted SQL Server GETDATE() to CURRENT_TIMESTAMP for column [pdtPositionCreateTime]
+DEBUG 2014-10-29 11:04:01,902 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:01,902 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [(0)] AFTER [0]
+ INFO 2014-10-29 11:04:01,903 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:574) - 
+
+CREATE TABLE [T_PRODUCTSTYPEPOSITION] (
+	[pdtPositionId]	integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	[pdtClassId]	integer,
+	[pdtPositionName]	nvarchar(50) NOT NULL COLLATE NOCASE,
+	[pdtPositionCreateTime]	datetime NOT NULL DEFAULT (CURRENT_TIMESTAMP),
+	[pdtImgUrl]	nvarchar(100) COLLATE NOCASE,
+	[sortID]	integer DEFAULT 0
+
+);
+
+
+
+DEBUG 2014-10-29 11:04:02,108 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:491) - added schema for SQLite table [T_PRODUCTSTYPEPOSITION]
+DEBUG 2014-10-29 11:04:02,108 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,109 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,109 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,109 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [(getdate)] AFTER [getdate]
+DEBUG 2014-10-29 11:04:02,109 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:725) - converted SQL Server GETDATE() to CURRENT_TIMESTAMP for column [pdtClassCreateTime]
+DEBUG 2014-10-29 11:04:02,110 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,110 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [(0)] AFTER [0]
+ INFO 2014-10-29 11:04:02,110 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:574) - 
+
+CREATE TABLE [T_PRODUCTSTYPECLASS] (
+	[pdtClassId]	integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	[pdtTypeId]	integer,
+	[pdtClassName]	nvarchar(50) NOT NULL COLLATE NOCASE,
+	[pdtClassCreateTime]	datetime NOT NULL DEFAULT (CURRENT_TIMESTAMP),
+	[pdtClassImgUrl]	nvarchar(100) COLLATE NOCASE,
+	[sortID]	integer DEFAULT 0
+
+);
+
+
+
+DEBUG 2014-10-29 11:04:02,348 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:491) - added schema for SQLite table [T_PRODUCTSTYPECLASS]
+DEBUG 2014-10-29 11:04:02,348 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,348 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,348 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,350 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,350 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,350 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,351 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,351 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+ INFO 2014-10-29 11:04:02,351 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:574) - 
+
+CREATE TABLE [T_Notice] (
+	[ID]	integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	[Title]	nvarchar(500) COLLATE NOCASE,
+	[Notice_Content]	text(2147483647) COLLATE NOCASE,
+	[Image_Url]	nvarchar(150) COLLATE NOCASE,
+	[CreateDate]	datetime,
+	[Status]	integer,
+	[DispOnMain]	bit,
+	[DispSort]	integer
+
+);
+
+
+
+DEBUG 2014-10-29 11:04:02,678 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:491) - added schema for SQLite table [T_Notice]
+DEBUG 2014-10-29 11:04:02,679 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,679 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,679 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,679 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,679 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,680 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,680 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,680 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,680 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,681 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,681 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,681 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,681 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,681 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,682 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,682 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,682 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,682 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,683 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,683 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:02,683 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+ INFO 2014-10-29 11:04:02,683 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:574) - 
+
+CREATE TABLE [T_PRODUCTDETAILS] (
+	[pdtID]	integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	[pdtTypeId]	integer,
+	[pdtClassId]	integer,
+	[pdtPositionId]	integer,
+	[pdtSeriesId]	integer,
+	[pdtAssortId]	integer,
+	[pdtName]	nvarchar(50) COLLATE NOCASE,
+	[pdtPDFUrl]	nvarchar(200) COLLATE NOCASE,
+	[pdtPDFOrderUrl]	nvarchar(200) COLLATE NOCASE,
+	[pdtPDFPage]	integer,
+	[pdtPDFOrderPage]	integer,
+	[pdtOrderInfo]	integer,
+	[pdtDescription]	nvarchar(200) COLLATE NOCASE,
+	[pdtImgUrl]	nvarchar(100) COLLATE NOCASE,
+	[pdtOperation]	integer,
+	[pdtVideo]	nvarchar(200) COLLATE NOCASE,
+	[pdtColorPages]	integer,
+	[pdtClinical]	integer,
+	[pdtKeyword]	nvarchar(50) COLLATE NOCASE,
+	[pdtApparatus]	integer,
+	[pdtRegNO]	nvarchar(100) COLLATE NOCASE
+
+);
+
+
+
+DEBUG 2014-10-29 11:04:03,201 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:491) - added schema for SQLite table [T_PRODUCTDETAILS]
+DEBUG 2014-10-29 11:04:03,201 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:03,201 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:03,202 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:03,202 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:03,202 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:03,202 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+DEBUG 2014-10-29 11:04:03,202 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [(getdate)] AFTER [getdate]
+DEBUG 2014-10-29 11:04:03,203 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:725) - converted SQL Server GETDATE() to CURRENT_TIMESTAMP for column [CREATEDATE]
+DEBUG 2014-10-29 11:04:03,203 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:722) - DEFAULT VALUE BEFORE [] AFTER []
+ INFO 2014-10-29 11:04:03,203 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:574) - 
+
+CREATE TABLE [T_USR] (
+	[USER_ID]	integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	[PASSWORD]	nvarchar COLLATE NOCASE,
+	[CID]	nvarchar COLLATE NOCASE,
+	[MOBILE]	nvarchar COLLATE NOCASE,
+	[REGIP]	nvarchar COLLATE NOCASE,
+	[LOGINIP]	nvarchar COLLATE NOCASE,
+	[CREATEDATE]	datetime COLLATE NOCASE DEFAULT (CURRENT_TIMESTAMP),
+	[ACCOUNT]	nvarchar COLLATE NOCASE
+
+);
+
+
+
+DEBUG 2014-10-29 11:04:03,492 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:491) - added schema for SQLite table [T_USR]
+DEBUG 2014-10-29 11:04:03,493 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:519) - finished adding all table/view schemas for SQLite database
+DEBUG 2014-10-29 11:04:03,497 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:133) - preparing to insert tables ...
+DEBUG 2014-10-29 11:04:03,716 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:186) - finished inserting all rows for table [T_PRODUCTSTYPE]
+DEBUG 2014-10-29 11:04:03,720 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:186) - finished inserting all rows for table [T_PRODUCTATTRIBUTE]
+DEBUG 2014-10-29 11:04:03,723 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:186) - finished inserting all rows for table [T_PRODUCTATTRRELATION]
+DEBUG 2014-10-29 11:04:03,727 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:186) - finished inserting all rows for table [T_PRODUCTATTRVALUE]
+DEBUG 2014-10-29 11:04:04,042 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:186) - finished inserting all rows for table [T_PRODUCTSTYPEASSORT]
+DEBUG 2014-10-29 11:04:04,148 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:186) - finished inserting all rows for table [T_PRODUCTSTYPESERIES]
+DEBUG 2014-10-29 11:04:04,407 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:186) - finished inserting all rows for table [T_PRODUCTSTYPEPOSITION]
+DEBUG 2014-10-29 11:04:04,526 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:186) - finished inserting all rows for table [T_PRODUCTSTYPECLASS]
+DEBUG 2014-10-29 11:04:04,643 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:186) - finished inserting all rows for table [T_Notice]
+DEBUG 2014-10-29 11:04:04,926 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:186) - finished inserting all rows for table [T_PRODUCTDETAILS]
+DEBUG 2014-10-29 11:04:05,025 (D:\temp2\SqlConverter_v1_20\DbAccess\SqlServerToSQLite.cs:186) - finished inserting all rows for table [T_USR]
